@@ -631,3 +631,64 @@
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
 }
+
+/* ESCRS IOL Calculator */
+.button-escrs-iol-calculator {
+  --button-text: #ffffff;
+  --button-background: #594ae2;
+}
+
+/* BiomAPI */
+.button-biomapi {
+    --button-text: #ffffff;
+    --button-background: #5f4e74;
+}
+
+/* BiomPEDI */
+.button-biompedi {
+  --button-text: #ffffff;
+  --button-background: #856800;
+}
+
+/* UAPO */
+.button-uapo {
+    --button-text: #ffffff;
+    --button-background: #7b0ab8;
+}
+
+/* Outros */
+.button-outros {
+    --button-text: #ffffff;
+    --button-background: #149469;
+}
+
+/* Glaucoma */
+.button-glaucoma {
+    --button-text: #ffffff;
+    --button-background: #e46f21;
+}
+
+/* Retina Médica */
+.button-retinamedica {
+    --button-text: #ffffff;
+    --button-background: #2589d4;
+}
+
+/* SCLÍNICO */
+.button-sclinico {
+    --button-text: #ffffff;
+    --button-background: #000000;
+}
+
+/* Chamar */
+.button-chamar {
+    --button-text: #ffffff;
+    --button-background: #004db3;
+}
+
+/* Externos */
+.button-externo {
+    --button-text: #ffffff;
+    --button-background: #3b3b3b;
+    --button-border: 1px solid #FFFFFF;
+}
