@@ -18,6 +18,8 @@
     <title>Oftalmologia | ULS Coimbra</title>
     <link rel="icon" type="image/webp" href="images/avatar.webp" />
     <!-- Update this with your own favicon -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Meta Description - Write a description (150-160 characters recommended) -->
     <meta
@@ -68,7 +70,7 @@
         </h1>
 
         <!-- Add a short description about yourself or your brand -->
-        <p>Portal interno do serviço de Oftalmologia da ULS Coimbra.</p>
+        <p>Portal interno do serviço de Oftalmologia da ULS Coimbra</p>
 
         <!-- Search -->
         <input
@@ -377,7 +379,11 @@
         </div>
 
         <!-- Feel free to add your own footer information, including updating `privacy.html` to reflect how your LittleLink fork is set up -->
-        <footer>Desenvolvido por Miguel Raimundo.</footer>
+        <footer>
+          <a href="#" id="install-btn" style="display:none;">Instalar no ambiente de trabalho</a>
+          <br id="install-br" style="display:none;" />
+          Desenvolvido por Miguel Raimundo
+        </footer>
       </div>
     </div>
 
@@ -444,6 +450,35 @@
           return qi === query.length;
         }
       })();
+
+      // PWA Install
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+      var installBtn = document.getElementById('install-btn');
+      var installBr = document.getElementById('install-br');
+      var deferredPrompt;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.style.display = '';
+        installBr.style.display = '';
+      });
+      installBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(function() {
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+            installBr.style.display = 'none';
+          });
+        }
+      });
+      window.addEventListener('appinstalled', function() {
+        installBtn.style.display = 'none';
+        installBr.style.display = 'none';
+      });
     </script>
   </body>
 </html>

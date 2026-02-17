@@ -152,7 +152,26 @@ body {
 /* Footer */
 footer {
 	margin:var(--spacing-xxl) 0;            /* 4rem (64px) top and bottom */
-    font-size:var(--scale-0);
+	font-size:0.75rem;
+	opacity:0.5;
+}
+#install-btn {
+	display:inline-block;
+	font-size:0.75rem;
+	letter-spacing:0.03em;
+	text-decoration:none;
+	color:inherit;
+	border:1px solid currentColor;
+	border-radius:2rem;
+	padding:0.3em 1em;
+	margin-bottom:var(--spacing-s);
+	transition:opacity 0.2s;
+}
+#install-btn:hover {
+	background:#1a1a1a;
+	color:#ffffff;
+	border-color:#1a1a1a;
+	opacity:1;
 }
 
 /* Responsive adjustments */
@@ -171,6 +190,7 @@ body {
 }
 footer {
 	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
+	font-size:0.7rem;
 }
 }
 
@@ -332,6 +352,11 @@ a:hover {
 :root.theme-dark .button-stack summary {
 	color: #ffffff;
 }
+:root.theme-dark #install-btn:hover {
+	background:#ffffff;
+	color:#121212;
+	border-color:#ffffff;
+}
 
 /* Auto theme */
 :root.theme-auto {
@@ -362,6 +387,11 @@ a:hover {
 }
 :root.theme-auto .button-stack summary {
 	color: #ffffff;
+}
+:root.theme-auto #install-btn:hover {
+	background:#ffffff;
+	color:#121212;
+	border-color:#ffffff;
 }
 }
 
