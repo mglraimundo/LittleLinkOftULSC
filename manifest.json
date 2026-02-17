@@ -1,6 +1,6 @@
 {
-  "name": "Oftalmologia | ULS Coimbra",
-  "short_name": "Oftalmologia",
+  "name": "ULSC Oftalmologia",
+  "short_name": "ULSC Oftalmologia",
   "description": "Portal interno do serviço de Oftalmologia da ULS Coimbra.",
   "start_url": "/",
   "display": "standalone",
