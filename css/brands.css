@@ -636,6 +636,7 @@
 .button-escrs-iol-calculator {
   --button-text: #ffffff;
   --button-background: #594ae2;
+  --button-border: 1px solid #FFFFFF;
 }
 
 /* BiomAPI */
@@ -656,24 +657,28 @@
 .button-uapo {
     --button-text: #ffffff;
     --button-background: #7b0ab8;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* Outros */
 .button-outros {
     --button-text: #ffffff;
     --button-background: #149469;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* Glaucoma */
 .button-glaucoma {
     --button-text: #ffffff;
     --button-background: #e46f21;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* Retina Médica */
 .button-retinamedica {
     --button-text: #ffffff;
     --button-background: #2589d4;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* SCLÍNICO */
