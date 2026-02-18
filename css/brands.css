@@ -642,12 +642,14 @@
 .button-biomapi {
     --button-text: #ffffff;
     --button-background: #2C1C5A;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* BiomPEDI */
 .button-biompedi {
   --button-text: #ffffff;
-  --button-background: #856800;
+  --button-background: #09812D;
+  --button-border: 1px solid #FFFFFF;
 }
 
 /* UAPO */
@@ -678,12 +680,14 @@
 .button-sclinico {
     --button-text: #ffffff;
     --button-background: #000000;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* Chamar */
 .button-chamar {
     --button-text: #ffffff;
     --button-background: #004db3;
+	--button-border: 1px solid #FFFFFF;
 }
 
 /* Externos */
