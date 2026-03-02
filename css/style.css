@@ -112,12 +112,12 @@
 
 /* Avatar */
 .avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
+	width: 6.5rem;           /* 104px */
+	height: 6.5rem;
 	border-radius: 50%;
 	object-fit: cover;
 	background-position: center;
-	margin-bottom: var(--spacing-l);
+	margin-bottom: var(--spacing-m);
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -125,8 +125,8 @@
 
 /* Typography Scale */
 h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
+	margin:0 0 var(--spacing-s) 0;
+	font-size:var(--scale-4);           /* ~39px */
   	font-weight:800;
 	line-height:1.1;
 	letter-spacing:-0.02em;
@@ -138,14 +138,14 @@ body {
   	line-height:1.6;
 }
 .container p {
-	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
-	line-height:1.6;
+	margin:0 0 var(--spacing-l) 0;
+	font-size:var(--scale-0);
+	line-height:1.5;
 }
 
 /* Container spacing */
 .container {
-	padding:var(--spacing-xl) var(--spacing-m) var(--spacing-xl) var(--spacing-m);
+	padding:var(--spacing-l) var(--spacing-m) var(--spacing-xl) var(--spacing-m);
 	text-align:center;
 }
 
@@ -177,7 +177,7 @@ footer {
 /* Responsive adjustments */
 @media (max-width:34.375rem) {              /* 550px */
   h1 {
-	font-size:var(--scale-4);
+	font-size:var(--scale-3);
 }
 body {
 	font-size:var(--scale-0);
@@ -186,7 +186,9 @@ body {
 	font-size:var(--scale-0);
 }
 .avatar {
-	margin-bottom:var(--spacing-m);
+	width: 5rem;
+	height: 5rem;
+	margin-bottom:var(--spacing-s);
 }
 footer {
 	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
@@ -297,11 +299,11 @@ a:hover {
 /* Avatar
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
+	width: 6.5rem;           /* 104px */
+	height: 6.5rem;
 	object-fit: cover;
 	background-position: center;
-	margin-bottom: var(--spacing-l);
+	margin-bottom: var(--spacing-m);
   }
 
    /* Modifier for no avatar rounding */
