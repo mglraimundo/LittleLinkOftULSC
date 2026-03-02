@@ -701,3 +701,10 @@
     --button-background: #3b3b3b;
     --button-border: 1px solid #FFFFFF;
 }
+
+/* Consentimentos */
+.button-consentimentos {
+    --button-text: #ffffff;
+    --button-background: #0284c7;
+	--button-border: 1px solid #FFFFFF;
+}
