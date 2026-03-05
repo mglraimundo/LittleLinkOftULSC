@@ -392,8 +392,8 @@
         </div>
 
         <footer>
-          <a href="#" id="install-btn" style="display:none;">Instalar no ambiente de trabalho</a>
-          <br id="install-br" style="display:none;" />
+          <a href="#" id="shortcut-btn">Criar atalho no ambiente de trabalho</a>
+          <br />
           Desenvolvido por Miguel Raimundo
         </footer>
       </div>
@@ -463,33 +463,22 @@
         }
       })();
 
-      // PWA Install
+      // Service worker for offline caching
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
       }
-      var installBtn = document.getElementById('install-btn');
-      var installBr = document.getElementById('install-br');
-      var deferredPrompt;
-      window.addEventListener('beforeinstallprompt', function(e) {
+
+      // Desktop shortcut download (.url file)
+      var shortcutBtn = document.getElementById('shortcut-btn');
+      shortcutBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        deferredPrompt = e;
-        installBtn.style.display = '';
-        installBr.style.display = '';
-      });
-      installBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then(function() {
-            deferredPrompt = null;
-            installBtn.style.display = 'none';
-            installBr.style.display = 'none';
-          });
-        }
-      });
-      window.addEventListener('appinstalled', function() {
-        installBtn.style.display = 'none';
-        installBr.style.display = 'none';
+        var urlContent = '[InternetShortcut]\r\nURL=https://oftalulsc.mraimundo.com\r\nIconIndex=0\r\n';
+        var blob = new Blob([urlContent], { type: 'application/internet-shortcut' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'Oftalmologia ULSC.url';
+        a.click();
+        URL.revokeObjectURL(a.href);
       });
     </script>
   </body>
