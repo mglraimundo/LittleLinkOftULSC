@@ -38,7 +38,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css?v=5" />
-    <link rel="stylesheet" href="css/style.css?v=6" />
+    <link rel="stylesheet" href="css/style.css?v=7" />
     <link rel="stylesheet" href="css/brands.css?v=5" />
 
     <!-- LittleLink Extended Stylesheet (Optional) -->
@@ -392,10 +392,21 @@
         </div>
 
         <footer>
-          <a href="#" id="shortcut-btn">Criar atalho no ambiente de trabalho</a>
+          <a href="#" id="shortcut-btn">Criar atalho</a>
           <br />
           Desenvolvido por Miguel Raimundo
         </footer>
+
+        <!-- Shortcut help modal -->
+        <div id="shortcut-modal" class="modal-overlay" style="display:none;">
+          <div class="modal-box">
+            <p>Para criar um atalho no ambiente de trabalho, arraste o ícone do lado esquerdo da barra de endereço para o seu ambiente de trabalho.</p>
+            <div id="shortcut-demo">
+              <!-- placeholder for future demo gif -->
+            </div>
+            <button id="shortcut-modal-close" class="modal-close">Entendido</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -468,17 +479,19 @@
         navigator.serviceWorker.register('sw.js');
       }
 
-      // Desktop shortcut download (.url file)
+      // Shortcut help modal
       var shortcutBtn = document.getElementById('shortcut-btn');
+      var shortcutModal = document.getElementById('shortcut-modal');
+      var shortcutClose = document.getElementById('shortcut-modal-close');
       shortcutBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        var urlContent = '[InternetShortcut]\r\nURL=https://oftalulsc.mraimundo.com\r\nIconIndex=0\r\n';
-        var blob = new Blob([urlContent], { type: 'application/internet-shortcut' });
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'Oftalmologia ULSC.url';
-        a.click();
-        URL.revokeObjectURL(a.href);
+        shortcutModal.style.display = '';
+      });
+      shortcutClose.addEventListener('click', function() {
+        shortcutModal.style.display = 'none';
+      });
+      shortcutModal.addEventListener('click', function(e) {
+        if (e.target === shortcutModal) shortcutModal.style.display = 'none';
       });
     </script>
   </body>
