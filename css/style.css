@@ -155,6 +155,13 @@ footer {
 	font-size:0.75rem;
 	opacity:0.5;
 }
+#shortcut-btn {
+	color:#888;
+	text-decoration:none;
+}
+#shortcut-btn:hover {
+	color:#666;
+}
 .modal-overlay {
 	position:fixed;
 	inset:0;
@@ -184,6 +191,9 @@ footer {
 	color:#ffffff;
 	font-size:0.8rem;
 	cursor:pointer;
+}
+.modal-close:hover {
+	opacity:0.8;
 }
 #shortcut-demo {
 	margin-top:1rem;
@@ -369,12 +379,21 @@ a:hover {
 :root.theme-dark .button-stack summary {
 	color: #ffffff;
 }
+:root.theme-dark #shortcut-btn {
+	color:#999;
+}
+:root.theme-dark #shortcut-btn:hover {
+	color:#bbb;
+}
 :root.theme-dark .modal-box {
 	background:#1e1e1e;
 	color:#ffffff;
 }
 :root.theme-dark .modal-close {
 	background:#ffffff;
+	color:#121212;
+}
+:root.theme-dark .modal-close:hover {
 	color:#121212;
 }
 
@@ -408,12 +427,21 @@ a:hover {
 :root.theme-auto .button-stack summary {
 	color: #ffffff;
 }
+:root.theme-auto #shortcut-btn {
+	color:#999;
+}
+:root.theme-auto #shortcut-btn:hover {
+	color:#bbb;
+}
 :root.theme-auto .modal-box {
 	background:#1e1e1e;
 	color:#ffffff;
 }
 :root.theme-auto .modal-close {
 	background:#ffffff;
+	color:#121212;
+}
+:root.theme-auto .modal-close:hover {
 	color:#121212;
 }
 }
