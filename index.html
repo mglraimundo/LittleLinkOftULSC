@@ -394,6 +394,8 @@
         <footer>
           <a href="#" id="install-btn" style="display:none;">Instalar no ambiente de trabalho</a>
           <br id="install-br" style="display:none;" />
+          <a href="#" id="shortcut-btn">Criar atalho no ambiente de trabalho</a>
+          <br />
           Desenvolvido por Miguel Raimundo
         </footer>
       </div>
@@ -469,12 +471,14 @@
       }
       var installBtn = document.getElementById('install-btn');
       var installBr = document.getElementById('install-br');
+      var shortcutBtn = document.getElementById('shortcut-btn');
       var deferredPrompt;
       window.addEventListener('beforeinstallprompt', function(e) {
         e.preventDefault();
         deferredPrompt = e;
         installBtn.style.display = '';
         installBr.style.display = '';
+        shortcutBtn.style.display = 'none';
       });
       installBtn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -484,12 +488,25 @@
             deferredPrompt = null;
             installBtn.style.display = 'none';
             installBr.style.display = 'none';
+            shortcutBtn.style.display = '';
           });
         }
       });
       window.addEventListener('appinstalled', function() {
         installBtn.style.display = 'none';
         installBr.style.display = 'none';
+      });
+
+      // Desktop shortcut fallback (.url file download)
+      shortcutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var urlContent = '[InternetShortcut]\r\nURL=https://oftalulsc.mraimundo.com\r\nIconIndex=0\r\n';
+        var blob = new Blob([urlContent], { type: 'application/internet-shortcut' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'Oftalmologia ULSC.url';
+        a.click();
+        URL.revokeObjectURL(a.href);
       });
     </script>
   </body>
