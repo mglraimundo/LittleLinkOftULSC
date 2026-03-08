@@ -176,27 +176,30 @@ footer {
 	color:#1a1a1a;
 	border-radius:0.75rem;
 	padding:1.5rem;
-	max-width:22rem;
+	max-width:28rem;
 	margin:1rem;
 	text-align:center;
 	font-size:0.9rem;
 	line-height:1.5;
 }
 .modal-close {
+	--button-text:#ffffff;
+	--button-background:#000000;
 	margin-top:1rem;
 	padding:0.4em 1.4em;
 	border:none;
 	border-radius:2rem;
-	background:#1a1a1a;
-	color:#ffffff;
+	background:var(--button-background);
+	color:var(--button-text);
 	font-size:0.8rem;
 	cursor:pointer;
 }
 .modal-close:hover {
+	color:var(--button-text);
 	opacity:0.8;
 }
 #shortcut-demo {
-	margin-top:1rem;
+	margin:1rem 0;
 }
 
 /* Responsive adjustments */
@@ -389,13 +392,6 @@ a:hover {
 	background:#1e1e1e;
 	color:#ffffff;
 }
-:root.theme-dark .modal-close {
-	background:#ffffff;
-	color:#121212;
-}
-:root.theme-dark .modal-close:hover {
-	color:#121212;
-}
 
 /* Auto theme */
 :root.theme-auto {
@@ -436,13 +432,6 @@ a:hover {
 :root.theme-auto .modal-box {
 	background:#1e1e1e;
 	color:#ffffff;
-}
-:root.theme-auto .modal-close {
-	background:#ffffff;
-	color:#121212;
-}
-:root.theme-auto .modal-close:hover {
-	color:#121212;
 }
 }
 

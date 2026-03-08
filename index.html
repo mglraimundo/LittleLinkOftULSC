@@ -38,7 +38,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css?v=5" />
-    <link rel="stylesheet" href="css/style.css?v=8" />
+    <link rel="stylesheet" href="css/style.css?v=11" />
     <link rel="stylesheet" href="css/brands.css?v=5" />
 
     <!-- LittleLink Extended Stylesheet (Optional) -->
@@ -180,6 +180,39 @@
                   src="images/icons/generic-blog.svg"
                   alt="uapo"
                 />Triagem UAPO</a
+              >
+            </div>
+          </details>
+
+          <!-- Impressos -->
+          <details>
+            <summary>Impressos</summary>
+            <div class="section-content">
+              <a
+                class="button button-externo"
+                href="pdfs/consentimento.pdf"
+                target="_blank"
+                rel="noopener"
+                role="button"
+                ><img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/generic-blog.svg"
+                  alt="Consentimento"
+                />Consentimento</a
+              >
+              <a
+                class="button button-externo"
+                href="pdfs/pedido-lios.pdf"
+                target="_blank"
+                rel="noopener"
+                role="button"
+                ><img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/generic-blog.svg"
+                  alt="Pedido LIOs"
+                />Pedido LIOs</a
               >
             </div>
           </details>
@@ -398,13 +431,23 @@
         </footer>
 
         <!-- Shortcut help modal -->
-        <div id="shortcut-modal" class="modal-overlay" style="display:none;">
+        <div id="shortcut-modal" class="modal-overlay" style="display: none">
           <div class="modal-box">
-            <p>Para criar um atalho no ambiente de trabalho, arraste o ícone do lado esquerdo da barra de endereço para o seu ambiente de trabalho.</p>
+            <p>
+              Para criar um atalho no ambiente de trabalho, arraste o ícone do
+              lado esquerdo da barra de endereço para o seu ambiente de
+              trabalho.
+            </p>
             <div id="shortcut-demo">
-              <!-- placeholder for future demo gif -->
+              <img
+                src="images/howto.gif"
+                alt="Como criar atalho no ambiente de trabalho"
+                style="max-width: 100%; border-radius: 8px; margin-top: 8px"
+              />
             </div>
-            <button id="shortcut-modal-close" class="modal-close">Entendido</button>
+            <button id="shortcut-modal-close" class="modal-close">
+              Entendido
+            </button>
           </div>
         </div>
       </div>
@@ -475,23 +518,23 @@
       })();
 
       // Service worker for offline caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
       }
 
       // Shortcut help modal
-      var shortcutBtn = document.getElementById('shortcut-btn');
-      var shortcutModal = document.getElementById('shortcut-modal');
-      var shortcutClose = document.getElementById('shortcut-modal-close');
-      shortcutBtn.addEventListener('click', function(e) {
+      var shortcutBtn = document.getElementById("shortcut-btn");
+      var shortcutModal = document.getElementById("shortcut-modal");
+      var shortcutClose = document.getElementById("shortcut-modal-close");
+      shortcutBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        shortcutModal.style.display = '';
+        shortcutModal.style.display = "";
       });
-      shortcutClose.addEventListener('click', function() {
-        shortcutModal.style.display = 'none';
+      shortcutClose.addEventListener("click", function () {
+        shortcutModal.style.display = "none";
       });
-      shortcutModal.addEventListener('click', function(e) {
-        if (e.target === shortcutModal) shortcutModal.style.display = 'none';
+      shortcutModal.addEventListener("click", function (e) {
+        if (e.target === shortcutModal) shortcutModal.style.display = "none";
       });
     </script>
   </body>
