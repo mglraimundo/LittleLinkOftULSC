@@ -708,3 +708,10 @@
     --button-background: #0284c7;
 	--button-border: 1px solid #FFFFFF;
 }
+
+/* Rx Lentes */
+.button-rxlentes {
+    --button-text: #ffffff;
+    --button-background: #149469;
+	--button-border: 1px solid #FFFFFF;
+}
